@@ -32,7 +32,7 @@
                 <a class="nav-link" href="#variable_scope">Variable Scope</a>
             </li>
             <li>
-                <a class="nav-link" href="#Global Variables">Global Variables</a>
+                <a class="nav-link" href="#global_variables">Global Variables</a>
             </li>
             <li>
                 <a class="nav-link" href="#constants">Constants</a>
@@ -224,6 +224,67 @@
                 </p>
             </article>
         </section>
+        <seaction class="main-section" id="global_variables">
+            <header>Global Variables</header>
+            <article>
+                <p>
+                    Global variables are defined outside of a function, usually on top of the program. 
+                    Global variables hold their value throughout the lifetime of the program and they can be accessed inside any of the functions defined for the program.
+                </p>
+                <p>
+                    A global variable can be accessed by any function. 
+                    That is, a global variable is available for use throughout the program after its declaration. 
+                    The following example uses both global and local variables:
+                </p>
+                <code>
+                    package main
+
+                    import "fmt"
+                    
+                    /* global variable declaration */
+                    var g int
+                    
+                    func main() {
+                        /* local variable declaration */
+                        var a, b int
+
+                        /* actual initialization */
+                        a = 10
+                        b = 20
+                        g = a + b
+
+                        fmt.Printf("value of a = %d, b = %d and g = %d\n", a, b, g)
+                    }
+                </code>
+                <p>When the above code is compiled and executed, it produces the following result: </p>
+                <code>
+                    value of a = 10, b = 20 and g = 30
+                </code>
+                <p>
+                    A program can have the same name for local and global variables but the value of the local variable inside a function takes precedence.
+                    For example: 
+                </p>
+                <code>
+                    package main
+
+                    import "fmt"
+                    
+                    /* global variable declaration */
+                    var g int = 20
+                    
+                    func main() {
+                        /* local variable declaration */
+                        var g int = 10
+                        
+                        fmt.Printf ("value of g = %d\n",  g)
+                    }
+                </code>
+                <p>When the above code is compiled and executed, it produces the following result: </p>
+                <code>
+                    value of g = 10
+                </code>
+            </article>
+        </seaction>
         <section class="main-section" id="constants">
             <header>Constants</header>
             <article>
