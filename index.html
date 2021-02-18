@@ -90,7 +90,89 @@
                 </ul>
             </article>
         </section>
-        
+        <section class="main-section" id="hello_world">
+            <header>Hello World</header>
+            <article>
+                <p>Get started with Hello, World.</p>
+                <ol>
+                    <li>
+                        Open a command prompt and cd to your home directory.
+                        <p>On Linux or Mac:</p>
+                        <code>
+                            cd
+                        </code>
+                        <p>On Windows:</p>
+                        <code>
+                            cd %HOMEPATH%
+                        </code>
+                    </li>
+                    <li>
+                        Create a hello directory for your first Go source code.
+                        <p>For example, use the following commands: </p>
+                        <code>
+                            mkdir hello 
+                            cd hello
+                        </code>
+                    </li>
+                    <li>
+                        Initialize a new module for tracking dependencies.
+                        <p>
+                            When your code imports packages from another module, a go.mod file lists the specific modules and versions providing those packages. That file stays with your code, including in your source code repository.
+                        </p>
+                        <p>
+                            To create a go.mod file, run the <a class="#" href="https://golang.org/cmd/go/#hdr-Initialize_new_module_in_current_directory"> go mod init command</a>, giving it the name of the module your code will be in (here, just use "hello"):
+                        </p>
+                        <code>
+                            $ go mod init hello 
+                            go: creating new go.mod: module hello
+                        </code>
+                    </li>
+                    <li>
+                        In your text editor, create a file hello.go in which to write your code.
+                    </li>
+                    <li>
+                        Paste the following code into your hello.go file and save the file.
+
+                        <code>
+                            package 
+                            
+                            import "fmt"
+
+                            func main() { 
+                                fmt.Println("Hello, World!")
+                            }
+                        </code>
+                        <p>This is your GO code. In this code, you: </p>
+                        <ul>
+                            <li>
+                                Declare a main package (a package is a way to group functions, and it's made up of all the files in the same directory).
+                            </li>
+                            <li>
+                                Import the popular <a class="#" href="https://golang.org/pkg/fmt/">fmt package</a>, which contains functions for formatting text, including printing to the console. This package is one of the <a class="#" href="https://golang.org/pkg/">standard library</a> packages you got when you installed Go.
+                            </li>
+                            <li>
+                                Implement a main function to print a message to the console. A main function executes by default when you run the main package.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Run your code to see the greeting.
+
+                        <code>
+                            $ go run .
+                            Hello, World!
+                        </code>
+                        <p>
+                            The <a class="#" href="https://golang.org/cmd/go/#hdr-Compile_and_run_Go_program">go run command</a> is one of many go commands you'll use to get things done with Go. Use the following command to get a list of others:
+                        </p>
+
+                        <code>
+                            $ go help
+                        </code>
+                    </li>
+                </ol>
+            </article>
+        </section>
     </main>
 </body>
 </html>
