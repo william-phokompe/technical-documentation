@@ -224,6 +224,35 @@
                 </p>
             </article>
         </section>
+        <section class="main-section" id="constants">
+            <header>Constants</header>
+            <article>
+                <p>You can use const prefix to declare constants with a specific type as follows: </p>
+                <code>
+                    const variable type = value;
+                </code>
+                <p>The following example shows how to use the <b>const</b> keyword: </p>
+                <code>
+                    package main
+
+                    import "fmt"
+
+                    func main() {
+                        const LENGTH int = 10
+                        const WIDTH int = 5   
+                        var area int
+
+                        area = LENGTH * WIDTH
+                        fmt.Printf("value of area : %d", area)
+                    }
+                </code>
+                <p>When the above code is compiled and executed, it produces the following result: </p>
+                <code>
+                    value of area: 50
+                </code>
+                <p><b>Note that it is good programming practice to define constants in CAPITALS.</b></p>
+            </article>
+        </section>
 
         <section class="main-section" id="reference">
             <header>Reference</header>
