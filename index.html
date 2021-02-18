@@ -38,6 +38,9 @@
                 <a class="nav-link" href="#local_variables">Local Variables</a>
             </li>
             <li>
+                <a class="nav-link" href="#formal_parameters">Formal Parameters</a>
+            </li>
+            <li>
                 <a class="nav-link" href="#constants">Constants</a>
             </li>
             <li>
@@ -301,6 +304,37 @@
                     <li>In the definition of function parameters (<b>formal </b>parameters)</li>
                 </ul>
                 <p>Let's find out what are <b>local</b> and <b>global</b> variables and what are <b>formal</b> parameters.</p>
+            </article>
+        </section>
+        <section class="main-section" id="local_variables">
+            <header>Local Variables</header>
+            <article>
+                <p>
+                    Variables that are declared inside a function or a block are called local variables. 
+                    They can be used only by statements that are inside that function or block of code. 
+                    Local variables are not known to functions outside their own. 
+                    The following example uses local variables. 
+                    Here all the variables a, b, and c are local to the main() function.
+                </p>
+                <code>
+                    package main
+
+                    import "fmt"
+
+                    func main() {
+                        /* local variable declaration */
+                        var a, b, c int 
+
+                        /* actual initialization */
+                        a = 10
+                        b = 20
+                        c = a + b
+
+                        fmt.Printf ("value of a = %d, b = %d and c = %d\n", a, b, c)
+                    }
+                </code>
+                <p>When the above code is compiled and executed, it produces the following result: </p>
+                <code>value of a = 10, b = 20 and c = 30</code>
             </article>
         </section>
         <section class="main-section" id="constants">
