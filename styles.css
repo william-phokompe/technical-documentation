@@ -125,3 +125,19 @@ code {
         min-width: 233px;
     }
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #4d4e53;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+      background-color: #dddddd;
+  }
